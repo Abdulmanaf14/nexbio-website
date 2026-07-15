@@ -1,5 +1,5 @@
 import { Header } from './components/Header';
-import { Hero } from './components/Hero';
+import { Home } from './components/Home';
 import './App.css';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       <Header />
       <main>
-        <Hero />
+        <Home />
       </main>
     </>
   );

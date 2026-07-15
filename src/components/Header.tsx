@@ -19,8 +19,8 @@ export const Header: React.FC = () => {
   }, []);
 
   return (
-    <div className="header-wrapper" style={{ padding: scrolled ? '0 16px' : '0 24px', top: scrolled ? '10px' : '20px' }}>
-      <header className={`header-container container glass ${scrolled ? 'scrolled' : ''}`}>
+    <div className={`header-wrapper ${scrolled ? 'scrolled' : ''}`}>
+      <header className={`header-container container ${scrolled ? 'scrolled' : ''}`}>
         {/* Logo */}
         <div className="logo-wrapper">
           <a href="/">
