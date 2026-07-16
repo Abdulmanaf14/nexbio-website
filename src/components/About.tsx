@@ -1,0 +1,98 @@
+import { useEffect, useRef } from 'react';
+import { Fingerprint, ShieldCheck, Network, Boxes } from 'lucide-react';
+import aboutBg from '../assets/about-bg.jpg';
+
+export const About: React.FC = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const elements = Array.from(section.querySelectorAll<HTMLElement>('.reveal'));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' },
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section className="about-section" id="about" ref={sectionRef}>
+      {/* Full-width parallax background (image is fixed to the viewport) */}
+      <div
+        className="about-bg"
+        aria-hidden="true"
+        style={{ backgroundImage: `url(${aboutBg})` }}
+      />
+
+      {/* Content scrolls naturally over the background */}
+      <div className="container about-content">
+        <header className="about-header reveal">
+          <span className="about-eyebrow">About NexBio</span>
+          <h2 className="about-title">Identity infrastructure for governments and enterprises</h2>
+          <p className="about-lead">
+            NexBio builds biometric identity infrastructure for organizations that need secure,
+            large-scale identity systems. We unify identification, adjudication, and integration
+            into one standards-based platform—so teams can prevent duplicate identities, operate at
+            national scale, and keep every identity decision secure, transparent, and auditable.
+          </p>
+        </header>
+
+        <div className="about-bento">
+          <article className="about-bento-cell about-bento-cell--wide reveal">
+            <span className="about-bento-eyebrow">
+              <Fingerprint size={16} /> Identity Infrastructure
+            </span>
+            <h3 className="about-bento-title">
+              An identity ecosystem, not just a matching engine.
+            </h3>
+            <p className="about-bento-desc">
+              NexABIS, NexSAS, and NexSDK work together across the full lifecycle—from biometric
+              capture and matching to human adjudication and developer integration.
+            </p>
+          </article>
+
+          <article className="about-bento-cell reveal">
+            <span className="about-bento-eyebrow">
+              <ShieldCheck size={16} /> Security by Design
+            </span>
+            <p className="about-bento-desc">
+              Encryption, role-based access control, and complete audit trails are built into every
+              layer of the platform.
+            </p>
+          </article>
+
+          <article className="about-bento-cell reveal">
+            <span className="about-bento-eyebrow">
+              <Network size={16} /> Standards-First
+            </span>
+            <p className="about-bento-desc">
+              Designed around ISO, ANSI/NIST, and ICAO for interoperability—without vendor lock-in.
+            </p>
+          </article>
+
+          <article className="about-bento-cell about-bento-cell--wide reveal">
+            <span className="about-bento-eyebrow">
+              <Boxes size={16} /> Operational Experience
+            </span>
+            <p className="about-bento-desc">
+              Built from firsthand work on national identity programs, border management, and
+              large-scale biometric deduplication.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  );
+};

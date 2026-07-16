@@ -1,4 +1,5 @@
 import { Hero } from './Hero';
+import { About } from './About';
 import { Challenges } from './Challenges';
 
 export const Home: React.FC = () => {
@@ -6,6 +7,7 @@ export const Home: React.FC = () => {
     <>
       <Hero />
       <Challenges />
+      <About />
       {/* Add more home sections here */}
     </>
   );
