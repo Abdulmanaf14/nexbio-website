@@ -2,14 +2,20 @@ import { Hero } from './Hero';
 import { About } from './About';
 import { Challenges } from './Challenges';
 import { Platform } from './Platform';
+import { ProductsPreview } from './ProductsPreview';
+import { SecurityStandards } from './SecurityStandards';
+import { UseCases } from './UseCases';
 
 export const Home: React.FC = () => {
   return (
     <>
       <Hero />
       <Challenges />
-      <About />
       <Platform />
+      <About />
+      <ProductsPreview />
+      <UseCases />
+      <SecurityStandards />
       {/* Add more home sections here */}
     </>
   );
