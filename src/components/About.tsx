@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Fingerprint, ShieldCheck, Network, Boxes } from 'lucide-react';
-import aboutBg from '../assets/about-bg.jpg';
+import aboutBg from '../assets/about.jpg';
 
 export const About: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);

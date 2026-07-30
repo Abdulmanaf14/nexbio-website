@@ -1,8 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import logo from '../assets/6.png';
 
-export const Header: React.FC = () => {
+const productLinks = [
+  {
+    href: '/products/nexabis',
+    title: 'NexABIS',
+    description: 'Automated biometric identification system',
+  },
+  {
+    href: '/products/nexsas',
+    title: 'NexSAS',
+    description: 'Smart adjudication and case workflow',
+  },
+  {
+    href: '/products/nexsdk',
+    title: 'NexSDK',
+    description: 'Biometric capture and integration SDK',
+  },
+];
+
+const mainLinks = [
+  { href: '#platform', label: 'Platform' },
+  { href: '#use-cases', label: 'Solutions' },
+  { href: '#security-standards', label: 'Technology' },
+  { href: '#about', label: 'Company' },
+];
+
+export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -23,62 +48,44 @@ export const Header: React.FC = () => {
       <header className={`header-container container ${scrolled ? 'scrolled' : ''}`}>
         {/* Logo */}
         <div className="logo-wrapper">
-          <a href="/">
-            <img src={logo} alt="NexBio Logo" style={{ height: '50px' }} />
+          <a href="/" className="logo-link" aria-label="NexBio home">
+            <img src={logo} alt="NexBio Logo" className="logo-image" />
           </a>
         </div>
 
         {/* Desktop Navigation Links */}
         <nav className="nav-links">
+          <a href="#platform" className="nav-item">Platform</a>
+
           {/* Products Dropdown */}
           <div className="nav-item nav-item-dropdown">
             Products <ChevronDown size={14} />
             <div className="dropdown-menu glass">
-              <a href="#abis" className="dropdown-item">
-                <span className="dropdown-title">NexABIS</span>
-                <span className="dropdown-desc">National-scale biometric matching engine</span>
-              </a>
-              <a href="#sas" className="dropdown-item">
-                <span className="dropdown-title">NexSAS</span>
-                <span className="dropdown-desc">Smart biometric adjudication workspace</span>
-              </a>
-              <a href="#sdk" className="dropdown-item">
-                <span className="dropdown-title">NexSDK</span>
-                <span className="dropdown-desc">Embeddable finger, face, and iris capture SDK</span>
+              {productLinks.map((link) => (
+                <a href={link.href} className="dropdown-item" key={link.title}>
+                  <span className="dropdown-title">{link.title}</span>
+                  <span className="dropdown-desc">{link.description}</span>
+                </a>
+              ))}
+              <a href="#products-preview" className="dropdown-item dropdown-item-muted">
+                <span className="dropdown-title">Product Overview</span>
+                <span className="dropdown-desc">Compare the NexBio product ecosystem</span>
               </a>
             </div>
           </div>
 
-          {/* Sectors Dropdown */}
-          <div className="nav-item nav-item-dropdown">
-            Sectors <ChevronDown size={14} />
-            <div className="dropdown-menu glass">
-              <div className="dropdown-item">
-                <span className="dropdown-title">Government & Borders</span>
-                <span className="dropdown-desc">National identity, eVisa, & travel clearance</span>
-              </div>
-              <div className="dropdown-item">
-                <span className="dropdown-title">Law Enforcement</span>
-                <span className="dropdown-desc">Deduplication, forensics, & watchlist checking</span>
-              </div>
-              <div className="dropdown-item">
-                <span className="dropdown-title">Banking & Enterprise</span>
-                <span className="dropdown-desc">Secure eKYC onboarding & access credentials</span>
-              </div>
-            </div>
-          </div>
-
-          <a href="#philosophy" className="nav-item">Philosophy</a>
-          <a href="#developers" className="nav-item">Developers</a>
+          <a href="#use-cases" className="nav-item">Solutions</a>
+          <a href="#security-standards" className="nav-item">Technology</a>
+          <a href="#about" className="nav-item">Company</a>
         </nav>
 
         {/* Right Actions */}
         <div className="header-actions">
           <div className="status-badge">
             <span className="pulse-dot"></span>
-            <span>API Active</span>
+            <span>Standards-ready</span>
           </div>
-          <a href="#demo" className="btn btn-secondary" style={{ padding: '8px 18px', fontSize: '14px', borderRadius: '100px' }}>
+          <a href="#contact" className="btn btn-secondary header-demo-btn">
             Request Demo
           </a>
         </div>
@@ -99,24 +106,28 @@ export const Header: React.FC = () => {
           <div className="mobile-drawer-content">
             <div className="mobile-drawer-section">
               <h3>Products</h3>
-              <a href="#abis" onClick={() => setMobileMenuOpen(false)}>NexABIS</a>
-              <a href="#sas" onClick={() => setMobileMenuOpen(false)}>NexSAS</a>
-              <a href="#sdk" onClick={() => setMobileMenuOpen(false)}>NexSDK</a>
+              {productLinks.map((link) => (
+                <a href={link.href} onClick={() => setMobileMenuOpen(false)} key={link.title}>
+                  {link.title}
+                </a>
+              ))}
             </div>
             <div className="mobile-drawer-section">
-              <h3>Sectors</h3>
-              <a>Government & Borders</a>
-              <a>Law Enforcement</a>
-              <a>Banking & Enterprise</a>
+              <h3>Navigation</h3>
+              {mainLinks.map((link) => (
+                <a href={link.href} onClick={() => setMobileMenuOpen(false)} key={link.label}>
+                  {link.label}
+                </a>
+              ))}
             </div>
             <div className="mobile-drawer-section">
-              <h3>Company</h3>
-              <a href="#philosophy" onClick={() => setMobileMenuOpen(false)}>Philosophy</a>
-              <a href="#developers" onClick={() => setMobileMenuOpen(false)}>Developers</a>
+              <h3>Engage</h3>
+              <a href="#products-preview" onClick={() => setMobileMenuOpen(false)}>Product Overview</a>
+              <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
             </div>
             <div className="mobile-drawer-actions">
-              <a href="#demo" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)} style={{ width: '100%' }}>
-                Request Government Demo
+              <a href="#contact" className="btn btn-primary mobile-demo-btn" onClick={() => setMobileMenuOpen(false)}>
+                Request Demo
               </a>
             </div>
           </div>

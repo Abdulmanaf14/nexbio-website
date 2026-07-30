@@ -1,6 +1,8 @@
 import { Hero } from './Hero';
 import { About } from './About';
 import { Challenges } from './Challenges';
+import { Footer } from './Footer';
+import { HomeCTA } from './HomeCTA';
 import { Platform } from './Platform';
 import { ProductsPreview } from './ProductsPreview';
 import { SecurityStandards } from './SecurityStandards';
@@ -16,7 +18,8 @@ export const Home: React.FC = () => {
       <ProductsPreview />
       <UseCases />
       <SecurityStandards />
-      {/* Add more home sections here */}
+      <HomeCTA />
+      <Footer />
     </>
   );
 };
