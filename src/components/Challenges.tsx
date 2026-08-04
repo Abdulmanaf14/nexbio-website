@@ -101,9 +101,9 @@ export const Challenges: React.FC = () => {
           <span className="challenges-eyebrow">The Challenge</span>
           <h2 className="challenges-title">The Challenges We're Solving</h2>
           <p className="challenges-subtitle">
-            Identity systems are expected to do more than ever—yet many still rely on technologies
-            designed decades ago. As populations and digital services grow, governments and
-            enterprises need platforms that are faster, more secure, and built for scale.
+            The biometric market is dominated by legacy platforms built more than a decade ago. As
+            populations and digital services grow, these systems have become bottlenecks for
+            countries and organizations trying to scale, integrate, or modernize.
           </p>
         </header>
 
@@ -133,14 +133,14 @@ export const Challenges: React.FC = () => {
             <span className="challenges-eyebrow">The Gap</span>
             <h3 className="challenges-closing-title">The Gap We Set Out to Solve</h3>
             <p className="challenges-closing-lead">
-              These challenges are not isolated—they are shared by identity programs around the
-              world.
+              These challenges are not isolated—across multiple national deployments, we witnessed
+              the same problems everywhere.
             </p>
             <p className="challenges-closing-body">
-              NexBio was created from firsthand experience working with national identity systems
-              and understanding the operational realities behind them. Rather than improving legacy
-              technology, we built a modern biometric infrastructure that addresses these challenges
-              from the ground up.
+              NexBio was created from firsthand experience working with national identity, border
+              control, and security systems—and the operational realities behind them. Rather than
+              improving legacy technology, we built modern biometric infrastructure from the ground
+              up to solve the problems governments and enterprises have struggled with for years.
             </p>
           </div>
 

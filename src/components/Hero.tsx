@@ -21,26 +21,26 @@ export const Hero: React.FC = () => {
         <div className="hero-left">
           <div className="hero-badge-container">
             <a href="#sas" className="glowing-badge">
-              <span>Trusted Identity Infrastructure</span>
+              <span>ISO Certified · NIST Compliance · Global Standard</span>
               <ArrowRight size={12} />
             </a>
           </div>
 
           <h1 className="hero-title">
-            Modern identity<br />
-            <span className="hero-title-gradient">infrastructure</span>
+            Modern Biometric Infrastructure<br />
+            <span className="hero-title-gradient">for a Secure and Inclusive World</span>
           </h1>
 
           <p className="hero-description">
-            Deploy secure, standards-compliant, and high-performance biometric matching engines, smart adjudication workflows, and embeddable SDKs built for national security and digital trust.
+            Built by experts with real-world experience delivering national ID, border security, and large-scale identity systems.
           </p>
 
           <div className="hero-ctas">
             <a href="#demo" className="btn btn-primary">
-              Get Started <ArrowRight size={16} className="btn-arrow" />
+              Request a Demo <ArrowRight size={16} className="btn-arrow" />
             </a>
             <a href="#docs" className="btn btn-secondary">
-              Read Specs <ArrowRight size={16} className="btn-arrow" />
+              Explore Our Products <ArrowRight size={16} className="btn-arrow" />
             </a>
           </div>
         </div>
