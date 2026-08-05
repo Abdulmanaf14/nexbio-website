@@ -2542,6 +2542,36 @@ a {
   line-height: 1.72;
 }
 
+.home-cta-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 24px;
+  margin-top: 22px;
+  font-size: 14px;
+}
+
+.home-cta-contact a,
+.home-cta-contact span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.home-cta-contact a {
+  transition: color 0.2s ease;
+}
+
+.home-cta-contact a:hover {
+  color: #ffffff;
+}
+
+.home-cta-contact svg {
+  flex: 0 0 auto;
+  color: var(--accent-blue);
+}
+
 .home-cta-actions {
   display: flex;
   flex-direction: column;

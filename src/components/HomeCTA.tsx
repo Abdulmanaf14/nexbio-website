@@ -1,5 +1,5 @@
 import { useEffect, useRef, type CSSProperties } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Mail, MapPin } from 'lucide-react';
 import fingerBackground from '../assets/finger-bg.jpg';
 
 export const HomeCTA = () => {
@@ -43,10 +43,20 @@ export const HomeCTA = () => {
               Talk to NexBio about national identity, border management, adjudication workflows,
               biometric SDK integration, or enterprise identity requirements.
             </p>
+            <div className="home-cta-contact">
+              <a href="mailto:contact@nex.bio">
+                <Mail size={16} strokeWidth={1.8} />
+                contact@nex.bio
+              </a>
+              <span>
+                <MapPin size={16} strokeWidth={1.8} />
+                Mantri Commercio Tower-A, Bellandur, Bengaluru, India
+              </span>
+            </div>
           </div>
 
           <div className="home-cta-actions">
-            <a href="mailto:contact@nexbio.com" className="btn btn-primary">
+            <a href="mailto:contact@nex.bio" className="btn btn-primary">
               Request Demo <ArrowRight size={16} className="btn-arrow" />
             </a>
             <a href="#products" className="btn btn-secondary">

@@ -78,14 +78,14 @@ export const Footer = () => {
         </div>
 
         <div className="footer-contact">
-          <a href="mailto:contact@nexbio.com">
+          <a href="mailto:contact@nex.bio">
             <Mail size={16} strokeWidth={1.8} />
-            contact@nexbio.com
+            contact@nex.bio
             <ArrowUpRight size={14} strokeWidth={1.8} />
           </a>
           <span>
             <MapPin size={16} strokeWidth={1.8} />
-            Global biometric identity infrastructure
+            Mantri Commercio Tower-A, Bellandur, Bengaluru, Karnataka 560103, India
           </span>
         </div>
 
