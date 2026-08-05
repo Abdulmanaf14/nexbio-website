@@ -7,7 +7,7 @@ import {
   Braces,
   Building2,
   CheckCircle2,
-  Cpu,
+
   DatabaseZap,
   Eye,
   GraduationCap,
