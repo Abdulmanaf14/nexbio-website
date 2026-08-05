@@ -2475,9 +2475,7 @@ a {
 .home-cta-section {
   position: relative;
   overflow: hidden;
-  background-image:
-    linear-gradient(90deg, rgba(3, 12, 22, 0.94) 0%, rgba(3, 12, 22, 0.78) 44%, rgba(3, 12, 22, 0.42) 100%),
-    var(--cta-background);
+
   background-position: center;
   background-size: cover;
   color: var(--text-primary);
@@ -2489,9 +2487,7 @@ a {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    radial-gradient(circle at 24% 10%, rgba(0, 210, 255, 0.2), transparent 34%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.24));
+  
 }
 
 .home-cta-section .container {
