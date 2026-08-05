@@ -478,36 +478,7 @@ export const About = () => {
         </div>
       </section>
 
-      {/* Product highlights */}
-      <section className="page-section">
-        <div className="container">
-          <header className="page-section-header reveal">
-            <span className="page-section-eyebrow">Our Products</span>
-            <h2 className="page-section-title">
-              Complete identity ecosystem for governments, security agencies, and enterprises.
-            </h2>
-          </header>
-          <div className="ap-grid-3">
-            {productHighlights.map((item, index) => (
-              <article
-                className="ap-product-card reveal"
-                key={item.name}
-                style={{ transitionDelay: `${(index % 3) * 90}ms` }}
-              >
-                <span className="ap-product-icon">
-                  <item.icon size={22} strokeWidth={1.8} />
-                </span>
-                <h3>{item.name}</h3>
-                <p>{item.body}</p>
-                <Link to={item.to} className="ap-product-link">
-                  Learn about {item.name} <ArrowRight size={15} />
-                </Link>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
+     
       {/* Promise */}
       <section className="page-section page-section--muted">
         <div className="container">
