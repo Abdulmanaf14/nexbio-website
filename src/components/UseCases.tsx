@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import {
   ArrowRight,
-  BadgeCheck,
   Banknote,
   Building2,
   CheckCircle2,
@@ -9,103 +8,72 @@ import {
   Landmark,
   Plane,
   Scale,
-  Shield,
-  UserCheck,
 } from 'lucide-react';
 
 const useCases = [
   {
     icon: Landmark,
-    sector: 'National ID',
-    title: 'Population identity programs',
+    sector: 'Government & National ID',
+    title: 'Population-scale identity programs',
     description:
-      'Prevent duplicate identities, support enrollment quality, and keep every identity decision traceable across large citizen databases.',
+      'Enrollment, deduplication, voter registration, CRVS, digital ID, and credential issuance for national identity systems.',
     products: ['NexABIS', 'NexSAS', 'NexSDK'],
     signal: 'Foundational identity',
   },
   {
     icon: Plane,
-    sector: 'Border Control',
-    title: 'Fast identity checks at ports of entry',
+    sector: 'Border Control & Immigration',
+    title: 'Secure entry, exit, and traveler checks',
     description:
-      'Enable biometric verification, watchlist search, and operator review for high-volume border and traveler workflows.',
-    products: ['NexABIS', 'NexSAS'],
+      'Biometric verification, watchlist search, passport validation, and officer terminals for high-volume border operations.',
+    products: ['NexABIS', 'NexSAS', 'NexSDK'],
     signal: 'High-volume verification',
   },
   {
-    icon: Shield,
-    sector: 'Immigration',
-    title: 'Secure enrollment and case resolution',
-    description:
-      'Connect biometric capture, identity matching, and adjudication workflows for residency, visa, and immigration operations.',
-    products: ['NexSDK', 'NexABIS', 'NexSAS'],
-    signal: 'Secure case workflows',
-  },
-  {
-    icon: BadgeCheck,
-    sector: 'Civil Registration',
-    title: 'Trusted foundational records',
-    description:
-      'Strengthen birth, civil, and resident registries with deduplication, biometric verification, and auditable updates.',
-    products: ['NexABIS', 'NexSDK'],
-    signal: 'Trusted records',
-  },
-  {
     icon: Scale,
-    sector: 'Law Enforcement',
-    title: 'Search, compare, and investigate',
+    sector: 'Law Enforcement & Security',
+    title: 'Investigative search and evidence review',
     description:
-      'Support controlled biometric search, evidence comparison, and structured review for investigative identity workflows.',
+      'Criminal identification, latent fingerprint comparison, field verification, and structured case review.',
     products: ['NexABIS', 'NexSAS'],
     signal: 'Controlled search',
   },
   {
     icon: Banknote,
-    sector: 'Banking',
-    title: 'Verified customer identity',
+    sector: 'Banking & Telecom',
+    title: 'KYC, onboarding, and fraud prevention',
     description:
-      'Embed biometric enrollment, verification, liveness, and secure API integration into financial identity journeys.',
+      'Biometric enrollment, verification, liveness, and secure API integration embedded into customer identity journeys.',
     products: ['NexSDK', 'NexABIS'],
     signal: 'Customer assurance',
   },
   {
-    icon: Building2,
-    sector: 'Enterprise Identity',
-    title: 'Workforce and access assurance',
-    description:
-      'Add biometric verification to enterprise systems where secure access, auditability, and interoperability matter.',
-    products: ['NexSDK'],
-    signal: 'Workforce access',
-  },
-  {
     icon: HeartPulse,
-    sector: 'Healthcare',
-    title: 'Safer patient identification',
+    sector: 'Healthcare & Insurance',
+    title: 'Trusted patient and beneficiary identity',
     description:
-      'Reduce duplicate records and improve confidence in patient identity across sensitive, high-trust healthcare workflows.',
+      'Unique patient identification, duplicate record prevention, and benefit verification across facilities.',
     products: ['NexSDK', 'NexABIS'],
     signal: 'Patient matching',
   },
   {
-    icon: UserCheck,
-    sector: 'Access Control',
-    title: 'Biometric verification at entry points',
+    icon: Building2,
+    sector: 'Enterprise & Workforce',
+    title: 'Access control and employee identity',
     description:
-      'Use face, fingerprint, or iris verification for controlled access experiences across facilities and secure environments.',
+      'Secure facility access, workforce onboarding, and identity management across the enterprise.',
     products: ['NexSDK'],
-    signal: 'Entry verification',
+    signal: 'Workforce access',
   },
 ];
 
 const marqueeItems = [
-  { icon: Landmark, label: 'National identity' },
-  { icon: Plane, label: 'Border management' },
-  { icon: BadgeCheck, label: 'Civil registration' },
-  { icon: Shield, label: 'Immigration' },
-  { icon: Banknote, label: 'Banking' },
+  { icon: Landmark, label: 'Government & National ID' },
+  { icon: Plane, label: 'Border & Immigration' },
+  { icon: Scale, label: 'Law enforcement' },
+  { icon: Banknote, label: 'Banking & Telecom' },
   { icon: HeartPulse, label: 'Healthcare' },
   { icon: Building2, label: 'Enterprise access' },
-  { icon: Scale, label: 'Law enforcement' },
 ];
 
 export const UseCases = () => {

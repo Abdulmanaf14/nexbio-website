@@ -18,38 +18,38 @@ import {
   UserCog,
 } from 'lucide-react';
 
-const standards = ['ISO', 'ANSI/NIST', 'ICAO', 'Open APIs'];
+const standards = ['ISO/IEC 19794', 'ANSI/NIST-ITL', 'ICAO', 'FIPS 140-2', 'GDPR', 'AES-256'];
 
 const securityControls = [
   {
     icon: LockKeyhole,
     title: 'End-to-end encryption',
-    description: 'Protect biometric and identity data across capture, transit, processing, and storage.',
+    description: 'AES-256 encryption protects biometric and identity data across capture, transit, processing, and storage.',
   },
   {
     icon: FileKey2,
     title: 'Secure template storage',
-    description: 'Store biometric templates with security controls designed for sensitive identity programs.',
+    description: 'Encrypted, versioned template storage with tamper detection for sensitive identity programs.',
   },
   {
     icon: UserCog,
     title: 'Role-based access control',
-    description: 'Give operators, supervisors, and administrators controlled access to the right workflows.',
+    description: 'Granular access for operators, supervisors, and administrators across every workflow.',
   },
   {
     icon: KeyRound,
     title: 'Authentication & authorization',
-    description: 'Control who can access platform services, APIs, workflows, and identity records.',
+    description: 'Two-factor authentication and SSO protect platform services, APIs, and identity records.',
   },
   {
     icon: ScrollText,
     title: 'Audit logging',
-    description: 'Maintain traceability for search activity, adjudication decisions, and administrative actions.',
+    description: 'Timestamped audit trails for searches, adjudication decisions, and administrative actions.',
   },
   {
     icon: ShieldCheck,
     title: 'Privacy by design',
-    description: 'Use secure engineering principles throughout the platform instead of treating privacy as an add-on.',
+    description: 'GDPR-aligned, privacy-by-design engineering built into every layer of the platform.',
   },
 ];
 

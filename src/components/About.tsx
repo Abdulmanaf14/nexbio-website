@@ -43,8 +43,8 @@ export const About: React.FC = () => {
           <h2 className="about-title">Identity infrastructure for governments and enterprises</h2>
           <p className="about-lead">
             NexBio builds biometric identity infrastructure for organizations that need secure,
-            large-scale identity systems. We unify identification, adjudication, and integration
-            into one standards-based platform—so teams can prevent duplicate identities, operate at
+            large-scale identity systems. Three independent, standards-based platforms—matching,
+            adjudication, and integration—help teams prevent duplicate identities, operate at
             national scale, and keep every identity decision secure, transparent, and auditable.
           </p>
         </header>
@@ -55,11 +55,12 @@ export const About: React.FC = () => {
               <Fingerprint size={16} /> Identity Infrastructure
             </span>
             <h3 className="about-bento-title">
-              An identity ecosystem, not just a matching engine.
+              A complete portfolio, not just a matching engine.
             </h3>
             <p className="about-bento-desc">
-              NexABIS, NexSAS, and NexSDK work together across the full lifecycle—from biometric
-              capture and matching to human adjudication and developer integration.
+              NexABIS, NexSAS, and NexSDK each address a distinct part of identity
+              operations—matching, adjudication, and integration—as standalone, standards-based
+              systems.
             </p>
           </article>
 
