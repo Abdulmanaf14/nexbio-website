@@ -8,8 +8,9 @@ import {
   ShieldAlert,
   Unplug,
   Workflow,
-  ImagePlus,
+
 } from 'lucide-react';
+import imagePlaceholder from '../assets/image.jpg';
 
 type Challenge = {
   icon: React.ComponentType<{ size?: number; strokeWidth?: number }>;
@@ -147,8 +148,7 @@ export const Challenges: React.FC = () => {
           {/* Image placeholder — replace with a suitable image later */}
           <div className="challenges-image-placeholder" aria-hidden="true">
             <div className="challenges-image-placeholder-content">
-              <ImagePlus size={28} strokeWidth={1.5} />
-              <span>Image placeholder</span>
+              <img src={imagePlaceholder} alt="Image placeholder" />
             </div>
           </div>
         </div>
