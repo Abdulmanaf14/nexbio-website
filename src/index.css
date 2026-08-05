@@ -1420,17 +1420,19 @@ a {
 }
 
 .platform-placeholder-content {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 1;
-  display: inline-flex;
-  flex-direction: column;
+  display: flex;
   align-items: center;
-  gap: 12px;
-  color: rgba(255, 255, 255, 0.6);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  justify-content: center;
+}
+
+.platform-placeholder-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .platform-visual-footer {

@@ -5,10 +5,10 @@ import {
   Braces,
   CheckCircle2,
   Cpu,
-  ImagePlus,
   Layers3,
   Workflow,
 } from 'lucide-react';
+import imagePlaceholder from '../assets/product-overview.png';
 
 type Stat = { value: string; label: string };
 
@@ -170,8 +170,7 @@ export const Platform = () => {
                 <span></span>
               </div>
               <div className="platform-placeholder-content">
-                <ImagePlus size={28} strokeWidth={1.5} />
-                <span>Product overview</span>
+                <img src={imagePlaceholder} alt="Product image placeholder" />
               </div>
             </div>
             <div className="platform-visual-footer">
