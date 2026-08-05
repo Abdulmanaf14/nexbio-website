@@ -156,26 +156,6 @@ const advantage = [
   },
 ];
 
-const productHighlights = [
-  {
-    icon: Cpu,
-    name: 'NexABIS',
-    body: `World-class ABIS for national scale. Fast, accurate search across fingerprint, face, and iris.`,
-    to: '/products/nexabis',
-  },
-  {
-    icon: Workflow,
-    name: 'NexSAS',
-    body: `Modern adjudication engine solving operational challenges: triage, case management, evidence visibility, and auditability.`,
-    to: '/products/nexsas',
-  },
-  {
-    icon: Braces,
-    name: 'NexSDK',
-    body: `Powerful multimodal biometric SDK for secure identity verification, onboarding, and access control.`,
-    to: '/products/nexsdk',
-  },
-];
 
 const promises = ['Accurate', 'Secure', 'Ethical', 'Interoperable', 'Scalable', 'Research-driven'];
 
