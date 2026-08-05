@@ -8,7 +8,7 @@ const footerColumns = [
       { label: 'NexABIS', href: '/products/nexabis' },
       { label: 'NexSAS', href: '/products/nexsas' },
       { label: 'NexSDK', href: '/products/nexsdk' },
-      { label: 'Product Overview', href: '#products-preview' },
+      { label: 'Product Overview', href: '#products' },
     ],
   },
   {

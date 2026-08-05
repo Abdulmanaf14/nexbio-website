@@ -49,7 +49,7 @@ export const HomeCTA = () => {
             <a href="mailto:contact@nexbio.com" className="btn btn-primary">
               Request Demo <ArrowRight size={16} className="btn-arrow" />
             </a>
-            <a href="#products-preview" className="btn btn-secondary">
+            <a href="#products" className="btn btn-secondary">
               View Products <ArrowRight size={16} className="btn-arrow" />
             </a>
           </div>

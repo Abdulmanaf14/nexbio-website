@@ -67,7 +67,7 @@ export const Header = () => {
                   <span className="dropdown-desc">{link.description}</span>
                 </a>
               ))}
-              <a href="#products-preview" className="dropdown-item dropdown-item-muted">
+              <a href="#products" className="dropdown-item dropdown-item-muted">
                 <span className="dropdown-title">Product Overview</span>
                 <span className="dropdown-desc">Compare the NexBio product ecosystem</span>
               </a>
@@ -122,7 +122,7 @@ export const Header = () => {
             </div>
             <div className="mobile-drawer-section">
               <h3>Engage</h3>
-              <a href="#products-preview" onClick={() => setMobileMenuOpen(false)}>Product Overview</a>
+              <a href="#products" onClick={() => setMobileMenuOpen(false)}>Product Overview</a>
               <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
             </div>
             <div className="mobile-drawer-actions">

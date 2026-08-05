@@ -4,7 +4,6 @@ import { Challenges } from './Challenges';
 import { Footer } from './Footer';
 import { HomeCTA } from './HomeCTA';
 import { Platform } from './Platform';
-import { ProductsPreview } from './ProductsPreview';
 import { SecurityStandards } from './SecurityStandards';
 import { UseCases } from './UseCases';
 
@@ -15,7 +14,6 @@ export const Home: React.FC = () => {
       <Challenges />
       <Platform />
       <About />
-      <ProductsPreview />
       <UseCases />
       <SecurityStandards />
       <HomeCTA />
