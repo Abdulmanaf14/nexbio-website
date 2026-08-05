@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ArrowUpRight, Mail, MapPin, ShieldCheck } from 'lucide-react';
 import logo from '../assets/6.png';
 
@@ -5,36 +6,36 @@ const footerColumns = [
   {
     title: 'Products',
     links: [
-      { label: 'NexABIS', href: '/products/nexabis' },
-      { label: 'NexSAS', href: '/products/nexsas' },
-      { label: 'NexSDK', href: '/products/nexsdk' },
-      { label: 'Product Overview', href: '#products' },
+      { label: 'NexABIS', to: '/products/nexabis' },
+      { label: 'NexSAS', to: '/products/nexsas' },
+      { label: 'NexSDK', to: '/products/nexsdk' },
+      { label: 'All Products', to: '/products' },
     ],
   },
   {
     title: 'Solutions',
     links: [
-      { label: 'National ID', href: '#use-cases' },
-      { label: 'Border Control', href: '#use-cases' },
-      { label: 'Immigration', href: '#use-cases' },
-      { label: 'Banking', href: '#use-cases' },
+      { label: 'National ID', to: '/#use-cases' },
+      { label: 'Border Control', to: '/#use-cases' },
+      { label: 'Immigration', to: '/#use-cases' },
+      { label: 'Banking', to: '/#use-cases' },
     ],
   },
   {
     title: 'Company',
     links: [
-      { label: 'About', href: '#about' },
-      { label: 'Platform', href: '#platform' },
-      { label: 'Technology', href: '#security-standards' },
-      { label: 'Contact', href: '#contact' },
+      { label: 'About', to: '/about' },
+      { label: 'Platform', to: '/#platform' },
+      { label: 'Technology', to: '/#security-standards' },
+      { label: 'Contact', to: '/contact' },
     ],
   },
   {
     title: 'Legal',
     links: [
-      { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Terms', href: '/terms' },
-      { label: 'Security', href: '#security-standards' },
+      { label: 'Privacy Policy', to: '/privacy' },
+      { label: 'Terms', to: '/terms' },
+      { label: 'Security', to: '/#security-standards' },
     ],
   },
 ];
@@ -45,9 +46,9 @@ export const Footer = () => {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <a href="/" className="footer-logo-link" aria-label="NexBio home">
+            <Link to="/" className="footer-logo-link" aria-label="NexBio home">
               <img src={logo} alt="NexBio Logo" className="footer-logo" />
-            </a>
+            </Link>
             <p>
               Next-generation biometric identity infrastructure for governments, enterprises, and
               organizations that require secure, scalable, and interoperable identity systems.
@@ -68,9 +69,9 @@ export const Footer = () => {
               <div className="footer-column" key={column.title}>
                 <h3>{column.title}</h3>
                 {column.links.map((link) => (
-                  <a href={link.href} key={link.label}>
+                  <Link to={link.to} key={link.label}>
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             ))}

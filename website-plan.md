@@ -4,17 +4,21 @@ This file tracks the website structure, navigation, components, and build order 
 
 ## Current Status
 
-Completed homepage sections:
+The site is now a **multi-page app** powered by `react-router-dom` (v7). Routing, a shared `Layout` (Header + `<Outlet/>` + Footer), a `ScrollManager`, a lean header, and a real hero + intro + CTA **scaffold for every page** are all in place — no route 404s. Homepage sections are complete; the other pages are scaffolded and ready to be built out page-by-page.
+
+Completed homepage sections (`/`):
 
 - [x] Hero
 - [x] Challenges
-- [x] Platform
-- [x] About
-- [x] Products Preview
+- [x] Platform (includes the product cards — the former standalone *Products Preview* was merged here and deleted)
+- [x] About (home section)
 - [x] Use Cases
 - [x] Standards & Security
 - [x] Home CTA
-- [x] Footer
+
+> Header & Footer are now global chrome rendered by `Layout` (not per-page).
+
+Pages scaffolded: `/`, `/products`, `/products/:slug` (nexabis / nexsas / nexsdk), `/about`, `/contact`, and `*` (NotFound).
 
 ## Website Structure
 
@@ -30,7 +34,6 @@ Sections:
 - [x] Challenges
 - [x] Platform
 - [x] About
-- [x] Products Preview
 - [x] Use Cases
 - [x] Standards & Security
 - [x] Home CTA
@@ -207,17 +210,15 @@ Sections:
 
 ## Navigation Map
 
-### Header
+### Header (lean — `Link`-based, router-aware)
 
-- [x] Platform -> `/#platform`
-- [x] Products -> `/products`
-- [x] NexABIS -> `/products/nexabis`
-- [x] NexSAS -> `/products/nexsas`
-- [x] NexSDK -> `/products/nexsdk`
-- [x] Solutions -> `/solutions`
-- [x] Technology -> `/technology`
-- [x] Company -> `/company`
-- [x] Contact / Request Demo -> `/contact`
+- [x] Logo -> `/`
+- [x] Products -> `/products` (dropdown: NexABIS `/products/nexabis`, NexSAS `/products/nexsas`, NexSDK `/products/nexsdk`, All Products `/products`)
+- [x] About -> `/about`
+- [x] Contact -> `/contact`
+- [x] Request Demo (button) -> `/contact`
+
+> Solutions & Technology are **not** in the header — they remain homepage sections, reachable from the footer via `/#use-cases` and `/#security-standards` (handled by `ScrollManager`).
 
 ### Footer
 
@@ -234,28 +235,35 @@ Sections:
 
 Existing components:
 
-- [x] `Header`
-- [x] `Home`
-- [x] `Hero`
-- [x] `Challenges`
-- [x] `Platform`
-- [x] `About`
+- [x] `Header` (lean nav, `Link`-based)
+- [x] `Footer` (global, route links)
+- [x] `Layout` (Header + `<Outlet/>` + Footer)
+- [x] `ScrollManager` (scroll-to-top + hash on route change)
+- [x] `Hero`, `Challenges`, `Platform`, `About` (home section), `UseCases`, `SecurityStandards`, `HomeCTA`
 
 Homepage components to add:
 
-- [x] `ProductsPreview`
 - [x] `UseCases`
 - [x] `SecurityStandards`
 - [x] `HomeCTA`
 - [x] `Footer`
+- [~] `ProductsPreview` — removed; product cards now live in `Platform`
 
 Shared page components:
 
-- [ ] `PageHero`
-- [ ] `SectionHeader`
-- [ ] `FeatureGrid`
-- [ ] `ProductVisualPlaceholder`
-- [ ] `CTASection`
+- [x] `PageHero`
+- [x] `SectionHeader`
+- [x] `CTASection`
+- [ ] `FeatureGrid` (add when building out product detail)
+- [ ] `ProductVisualPlaceholder` (add when product imagery is ready)
+
+Shared data:
+
+- [x] `src/data/products.ts` (NexABIS, NexSAS, NexSDK — name, slug, overview, badges, stats, capabilities)
+
+Pages (`src/pages/`):
+
+- [x] `Home`, `Products`, `ProductDetail`, `About`, `Contact`, `NotFound`
 
 Product page components:
 
@@ -273,22 +281,24 @@ Other page components:
 
 ## Implementation Order
 
-Recommended next steps:
+Done in this structural pass:
 
-1. [x] Add `ProductsPreview` to the homepage.
-2. [x] Add `UseCases` to the homepage.
-3. [x] Add `SecurityStandards` to the homepage.
-4. [x] Add `HomeCTA` to the homepage.
-5. [x] Add `Footer`.
-6. [ ] Add routing.
-7. [ ] Create `/products` overview page.
-8. [ ] Create `/products/nexabis`.
-9. [ ] Create `/products/nexsas`.
-10. [ ] Create `/products/nexsdk`.
-11. [ ] Create `/solutions`.
-12. [ ] Create `/technology`.
-13. [ ] Create `/company`.
-14. [ ] Create `/contact`.
+1. [x] Homepage sections complete (Hero, Challenges, Platform, About, UseCases, SecurityStandards, HomeCTA).
+2. [x] Install `react-router-dom` v7 + `BrowserRouter` routes in `App.tsx`.
+3. [x] Shared `Layout` (Header + `<Outlet/>` + Footer) and `ScrollManager` (scroll-to-top + hash).
+4. [x] Rewrite `Header` to lean nav (Products dropdown, About, Contact) using `Link`.
+5. [x] Repoint `Footer` links to real routes; keep home-section hash links.
+6. [x] Shared components: `PageHero`, `SectionHeader`, `CTASection`.
+7. [x] Shared data: `src/data/products.ts` (single source for the 3 products).
+8. [x] Page scaffolds: `Home`, `Products`, `ProductDetail` (`/products/:slug`), `About`, `Contact`, `NotFound`.
+
+Next — build out full content, page by page (priority order):
+
+9. [ ] **About** — full company story, team, timeline, badges (readme §1, §2, §11).
+10. [ ] **Products overview** — comparison table, integration detail, deployment options.
+11. [ ] **NexABIS / NexSAS / NexSDK detail** — full readme §12 content (capabilities, metrics, use cases, deployment, compliance) per product.
+12. [ ] **Contact** — wire the demo form (backend or mailto), add map/office detail.
+13. [ ] *(Optional)* Dedicated `/solutions` and `/technology` pages; Blogs.
 
 ## Content Source
 
