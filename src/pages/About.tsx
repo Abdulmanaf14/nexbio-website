@@ -24,7 +24,7 @@ import {
 } from 'lucide-react';
 import heroBg from '../assets/aboutUs.jpg';
 import storyImg from '../assets/identity-infra.jpg';
-import sectionBg from '../assets/section-bg.jpg';
+
 
 /* All copy below is taken verbatim from readme.md (§1, §2, §8, §11, §13). */
 
@@ -433,7 +433,6 @@ export const About = () => {
       {/* Advantage */}
       <section
         className="page-section ap-advantage"
-        style={{ backgroundImage: `url(${sectionBg})` }}
       >
         <div className="container">
           <header className="page-section-header reveal">

@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import { Fingerprint, ShieldCheck, Network, Boxes } from 'lucide-react';
-import aboutBg from '../assets/about.jpg';
 
 export const About: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -31,9 +30,8 @@ export const About: React.FC = () => {
     <section className="about-section" id="about" ref={sectionRef}>
       {/* Full-width parallax background (image is fixed to the viewport) */}
       <div
-        className="about-bg"
         aria-hidden="true"
-        style={{ backgroundImage: `url(${aboutBg})` }}
+        
       />
 
       {/* Content scrolls naturally over the background */}
@@ -43,8 +41,8 @@ export const About: React.FC = () => {
           <h2 className="about-title">Identity infrastructure for governments and enterprises</h2>
           <p className="about-lead">
             NexBio builds biometric identity infrastructure for organizations that need secure,
-            large-scale identity systems. Three independent, standards-based platforms—matching,
-            adjudication, and integration—help teams prevent duplicate identities, operate at
+            large-scale identity systems. Three independent, standards-based platforms matching,
+            adjudication, and integration help teams prevent duplicate identities, operate at
             national scale, and keep every identity decision secure, transparent, and auditable.
           </p>
         </header>
@@ -59,7 +57,7 @@ export const About: React.FC = () => {
             </h3>
             <p className="about-bento-desc">
               NexABIS, NexSAS, and NexSDK each address a distinct part of identity
-              operations—matching, adjudication, and integration—as standalone, standards-based
+              operations matching, adjudication, and integration as standalone, standards-based
               systems.
             </p>
           </article>
@@ -79,7 +77,7 @@ export const About: React.FC = () => {
               <Network size={16} /> Standards-First
             </span>
             <p className="about-bento-desc">
-              Designed around ISO, ANSI/NIST, and ICAO for interoperability—without vendor lock-in.
+              Designed around ISO, ANSI/NIST, and ICAO for interoperability without vendor lock-in.
             </p>
           </article>
 

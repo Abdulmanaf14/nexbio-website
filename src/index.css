@@ -3,9 +3,9 @@
   --bg-primary: #040407;
   --bg-secondary: #ffffff;
   
-  --accent-blue: #00d2ff;
+  /* --accent-blue: #00d2ff;
   --accent-neon: #3b82f6;
-  --accent-purple: #8b5cf6;
+  --accent-purple: #8b5cf6; */
   
   --text-primary: #ffffff;
   --text-secondary: #a0aec0;
@@ -52,7 +52,7 @@ body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 600;
+  /* font-weight: 00; */
   letter-spacing: -0.02em;
 }
 
@@ -473,7 +473,7 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 80% 30%, rgba(0, 210, 255, 0.05), rgba(4, 4, 7, 0.9) 70%);
+  background: linear-gradient(180deg, rgba(4, 4, 7, 0.6) 0%, rgba(4, 4, 7, 0.8) 100%);
   z-index: 1;
 }
 
@@ -492,7 +492,7 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 760px;
+  max-width: 1000px;
 }
 
 .hero-badge-container {
@@ -500,7 +500,7 @@ a {
 }
 
 .hero-title {
-  font-size: 64px;
+  font-size: 54px;
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -822,7 +822,7 @@ a {
 
 @media (max-width: 640px) {
   .hero-title {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .hero-ctas {
@@ -1063,37 +1063,31 @@ a {
    monochrome with a single brand accent (#0071e8)
    ============================================================ */
 .about-section {
-  --about-accent: #0071e8;
+  --about-accent: var(--text-dark)
   position: relative;
-  background: #05060a; /* fallback behind the image */
   color: var(--text-primary);
   overflow: hidden;
+  background: var(--bg-secondary);
 }
 
 /* Sticky parallax background: image is pinned to the viewport
    while the content scrolls over it naturally. */
-.about-bg {
+/* .about-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-color: #05060a; /* shown while the image loads */
+  
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
+} */
 
-/* Readability overlay + bottom fade into the page */
+/* Readability overlay + bottom fade into the page
 .about-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(4, 5, 8, 0.72) 40%,
-    rgba(4, 5, 8, 0.80) 80%,
-    rgba(4, 5, 8, 0.92) 100%
-  );
-}
+} */
 
 .about-content {
   position: relative;
@@ -1116,7 +1110,7 @@ a {
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--about-accent);
+  color: var(--text-dark);
   margin-bottom: 22px;
 }
 
@@ -1132,14 +1126,14 @@ a {
   font-size: 46px;
   line-height: 1.12;
   letter-spacing: -0.03em;
-  color: #ffffff;
+  color: var(--text-dark);
   margin-bottom: 22px;
 }
 
 .about-lead {
   font-size: 18px;
   line-height: 1.7;
-  color: var(--text-secondary);
+  color: var(--text-dark);
   max-width: 680px;
   margin: 0 auto;
 }
@@ -1154,8 +1148,8 @@ a {
 }
 
 .about-bento-cell {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(133, 124, 124, 0.03);
+  border: 1px solid #686262;
   border-radius: 18px;
   padding: 30px;
   backdrop-filter: blur(8px);
@@ -1164,7 +1158,7 @@ a {
 }
 
 .about-bento-cell:hover {
-  border-color: rgba(255, 255, 255, 0.18);
+  border-color: #686262;
   background: rgba(255, 255, 255, 0.05);
   transform: translateY(-3px);
 }
@@ -1180,7 +1174,7 @@ a {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.01em;
-  color: var(--about-accent);
+  color: var(--text-dark);
   margin-bottom: 14px;
 }
 
@@ -1188,14 +1182,14 @@ a {
   font-size: 22px;
   line-height: 1.25;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: var(--text-dark);
   margin-bottom: 10px;
 }
 
 .about-bento-desc {
   font-size: 15px;
   line-height: 1.65;
-  color: var(--text-secondary);
+  color: var(--text-dark);
 }
 
 /* About responsiveness */
@@ -2173,7 +2167,6 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: #0071e8;
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 600;
@@ -2267,7 +2260,7 @@ a {
   border: 1px solid rgba(0, 113, 232, 0.16);
   border-radius: 14px;
   background: rgba(0, 113, 232, 0.07);
-  color: #0071e8;
+
   margin-bottom: 22px;
 }
 
@@ -2292,10 +2285,8 @@ a {
   padding: 28px;
   border: 1px solid #dfe3ea;
   border-radius: 18px;
-  background:
-    linear-gradient(180deg, rgba(4, 4, 7, 0.94), rgba(10, 13, 22, 0.96)),
-    #05060a;
-  color: #ffffff;
+
+  color: var(--text-dark);
   box-shadow: 0 24px 70px rgba(15, 23, 42, 0.16);
 }
 
@@ -2324,7 +2315,7 @@ a {
   margin-bottom: 26px;
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.035);
+  background: rgba(114, 69, 190, 0.035);
 }
 
 .security-scan-frame {
@@ -2343,7 +2334,7 @@ a {
 .security-scan-line {
   position: absolute;
   left: 50%;
-  color: rgba(0, 210, 255, 0.55);
+  color: #262222;
   transform: translateX(-50%);
   animation: securityScan 3.4s ease-in-out infinite;
 }
@@ -2360,7 +2351,7 @@ a {
 }
 
 .security-architecture-panel h3 {
-  color: #ffffff;
+  color: var(--text-dark);
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -2368,7 +2359,7 @@ a {
 }
 
 .security-architecture-panel p {
-  color: var(--text-secondary);
+  color: var(--text-dark);
   font-size: 14px;
   line-height: 1.68;
   margin-bottom: 22px;
@@ -2384,7 +2375,7 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--text-dark);
   font-size: 13px;
 }
 
@@ -4024,9 +4015,9 @@ a {
   color: #475569;
 }
 
-.ap .page-section--muted .page-section-eyebrow {
+/* .ap .page-section--muted .page-section-eyebrow {
   color: #0284a8;
-}
+} */
 
 .ap .page-section--muted .ap-mv-card,
 .ap .page-section--muted .ap-problem-card,
@@ -4059,9 +4050,9 @@ a {
 .ap .page-section--muted .ap-mv-eyebrow,
 .ap .page-section--muted .ap-mv-icon,
 .ap .page-section--muted .ap-problem-icon,
-.ap .page-section--muted .ap-feature-icon {
+/* .ap .page-section--muted .ap-feature-icon {
   color: #0284a8;
-}
+} */
 
 .ap .page-section--muted .ap-mv-icon,
 .ap .page-section--muted .ap-problem-icon,
@@ -4698,7 +4689,7 @@ a {
   border-radius: 12px;
   background: #ffffff;
   border: 1px solid rgba(0, 148, 184, 0.22);
-  color: #0284a8;
+  /* color: #0284a8; */
 }
 
 .cp-locate-item-label {
@@ -4717,9 +4708,9 @@ a {
   color: var(--text-dark);
 }
 
-.cp-locate-item a:hover {
+/* .cp-locate-item a:hover {
   color: #0284a8;
-}
+} */
 
 .cp-locate-region {
   margin-top: 4px;
@@ -4855,9 +4846,9 @@ a {
   color: #475569;
 }
 
-.cp .page-section--muted .page-section-eyebrow {
+/* .cp .page-section--muted .page-section-eyebrow {
   color: #0284a8;
-}
+} */
 
 /* Contact page responsive */
 @media (max-width: 1024px) {

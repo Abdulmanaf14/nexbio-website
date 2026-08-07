@@ -27,12 +27,12 @@ export const Hero: React.FC = () => {
           </div>
 
           <h1 className="hero-title">
-            Modern Biometric Infrastructure<br />
-            <span className="hero-title-gradient">for a Secure and Inclusive World</span>
+            Modern Biometric Infrastructure for a Secure and
+            <span > Inclusive World</span>
           </h1>
 
           <p className="hero-description">
-            Built by experts with real-world experience delivering national ID, border security, and large-scale identity systems.
+            Built by experts with real world experience delivering national ID, border security, and large-scale identity systems.
           </p>
 
           <div className="hero-ctas">

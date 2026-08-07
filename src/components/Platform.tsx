@@ -137,7 +137,7 @@ export const Platform = () => {
               A complete biometric identity portfolio, built for national scale.
             </h2>
             <p className="platform-subtitle">
-              NexBio delivers three independent, standards-compliant systems — high-performance
+              NexBio delivers three independent, standards-compliant systems high-performance
               identification, expert-led adjudication, and developer-ready integration. Each is
               engineered to operate as a standalone platform for governments, security agencies,
               and enterprises.

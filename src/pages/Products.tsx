@@ -9,7 +9,7 @@ export const Products = () => (
     <PageHero
       eyebrow="Products"
       title="A complete biometric identity portfolio, built for national scale."
-      subtitle="Three independent, standards-compliant systems — high-performance identification, expert-led adjudication, and developer-ready integration. Each operates as a standalone platform for governments, security agencies, and enterprises."
+      subtitle="Three independent, standards-compliant systems high-performance identification, expert-led adjudication, and developer-ready integration. Each operates as a standalone platform for governments, security agencies, and enterprises."
     />
 
     <section className="page-section">
